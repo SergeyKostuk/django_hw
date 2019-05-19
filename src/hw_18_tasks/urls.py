@@ -1,7 +1,7 @@
 from django.urls import path
-from hwtask01.views import record
-from hwtask01.views import display_
-from hwtask01.views import delete_and_go_to_record
+from hw_18_tasks.views import record
+from hw_18_tasks.views import display_
+from hw_18_tasks.views import delete_and_go_to_record
 
 urlpatterns = [
 

@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('longestlen/', index),
     path('date/', check_date),
-    path('hw/', include('hwtask01.urls')),
+    path('hw/', include('hw_18_tasks.urls')),
 
 ]

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url "ticket" %}" method="POST">
+
+    {{ form.as_p }}
+
+    </p>
+    <br><input type="submit" name="submit" value="accept">
+</form>
+{% endblock %}

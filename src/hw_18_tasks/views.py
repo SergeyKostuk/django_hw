@@ -26,12 +26,11 @@ def display_(request):
         with open('test.txt') as my_file:
             my_list = my_file.readlines()
 
-        return HttpResponse(template.render({'my_list': my_list}, request))
+        return render(request, 'display_list.html', {'my_list': my_list})
 
-
-def delete_and_go_to_record(request):
+def clear(request):
     if request.method == 'GET':
-        with open('test.txt', 'w') as my_file:
+        with open('test.txt', 'w') :
             pass
         template = loader.get_template('name_sname_age.html')
 

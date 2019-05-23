@@ -19,9 +19,8 @@ def salle(request):
             errors = form.errors
             return HttpResponse(f'{errors}')
         if number_of_tickets == 1:
-            print('стоимость 100$')
+            result_cost = 100
         elif number_of_tickets > 1:
             result_cost = 2 * number_of_tickets * 100
-
 
         return render(request, 'display_cost.html', {'result_cost': result_cost})

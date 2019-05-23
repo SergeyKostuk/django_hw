@@ -22,6 +22,6 @@ def salle(request):
             print('стоимость 100$')
         elif number_of_tickets > 1:
             result_cost = 2 * number_of_tickets * 100
-            print(f'стоимость {result_cost}$')
+
 
         return render(request, 'display_cost.html', {'result_cost': result_cost})

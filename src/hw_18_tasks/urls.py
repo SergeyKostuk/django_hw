@@ -6,8 +6,8 @@ from hw_18_tasks.views import clear
 
 urlpatterns = [
 
-    path('record/', record),
-    path('display_/', display_),
-    path('del/', clear),
+    path('record/', record, name='record'),
+    path('display_/', display_, name='display'),
+    path('del/', clear, name='clear'),
 
 ]

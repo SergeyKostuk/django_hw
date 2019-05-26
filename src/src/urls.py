@@ -24,5 +24,6 @@ urlpatterns = [
     path('date/', check_date),
     path('hw/', include('hw_18_tasks.urls')),
     path('hw19/', include('hw19task.urls')),
+    path('hw20/', include('hw20_cars.urls')),
 
 ]

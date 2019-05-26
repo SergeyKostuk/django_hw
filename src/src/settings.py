@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'myapp1',
     'hw_18_tasks',
     'hw19task',
+    'hw20_cars',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['template',
                  'hw19task.templates',
+                 'hw20_cars.templates',
                  'hw_18_tasks.templates'],
         'APP_DIRS': True,
         'OPTIONS': {

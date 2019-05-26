@@ -2,5 +2,12 @@
 {% block content %}
 
 <h1>Hi its home page</h1>
-    <a href="{% url 'new_record' %}">add</a>
+
+{% for brand in  brand_set %}
+    <p>
+
+</p><a href="{% url 'show' brand %}">{{ brand }}</a>
+    {% endfor %}
+    </p><a href="{% url 'all'  %}">show all</a>
+    </p><a href="{% url 'new_record' %}">add new</a>
 {% endblock %}

@@ -1,0 +1,16 @@
+{% block content %}
+
+
+{% for car in cars %}
+    <p>
+    {{ car.brand }}
+    {{ car.model }}
+    {{ car.color }}
+    {{ car.weight }}
+    {{ car.owner_full_name }}
+    {{ car.release_year }}
+        <a href="{% url 'remove_record' car.id %}">del</a>
+    </p>
+{% endfor %}
+
+ {% endblock %}

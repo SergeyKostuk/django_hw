@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<p align="center">all records about brand u chose</p>
+    <table align="center" border="2">
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Full name</th>
+            <th>release_year</th>
+            <th></th>
+        </tr>
+       {% for car in  one_brand %}
+            <tr>
+                <td>{{ car.brand }}</td>
+                <td>{{ car.model }}</td>
+                <td> {{ car.color }}</td>
+                <td>{{ car.weight }}</td>
+                <td>{{ car.owner_full_name }}</td>
+                <td>{{ car.release_year }}</td>
+                <td>
+
+                    <a href="{% url 'remove_record' car.id %}">REMOVE</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

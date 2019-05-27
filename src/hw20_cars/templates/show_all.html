@@ -1,16 +1,33 @@
 {% block content %}
 
+    <table align="center" border="2">
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Full name</th>
+            <th>release_year</th>
+            <th></th>
+        </tr>
+        {% for car in  cars %}
+            <tr>
+                <td>{{ car.brand }}</td>
+                <td>{{ car.model }}</td>
+                <td> {{ car.color }}</td>
+                <td>{{ car.weight }}</td>
+                <td>{{ car.owner_full_name }}</td>
+                <td>{{ car.release_year }}</td>
+                <td>
 
-{% for car in cars %}
-    <p>
-    {{ car.brand }}
-    {{ car.model }}
-    {{ car.color }}
-    {{ car.weight }}
-    {{ car.owner_full_name }}
-    {{ car.release_year }}
-        <a href="{% url 'remove_record' car.id %}">del</a>
-    </p>
-{% endfor %}
 
- {% endblock %}
+                    <a href="{% url 'edit_record' car.id %}">change record</a>
+                </td>
+                <td>
+                    <a href="{% url 'remove_record' car.id %}">delite record</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

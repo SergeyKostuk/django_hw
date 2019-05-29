@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'hw_18_tasks',
     'hw19task',
     'hw20_cars',
+    'hw21',
 ]
 
 MIDDLEWARE = [
